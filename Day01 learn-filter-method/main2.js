@@ -182,7 +182,7 @@ var b = 2;
 
 if (a > b) {
     console.log('Điều kiện đúng')
-} else{Ơ
+} else{
     console.log('Điều kiện sai')
 }
 //Toán tử bé hơn < // 

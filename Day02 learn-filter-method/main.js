@@ -165,14 +165,14 @@ var showMassage = function() {
 4. Chú ý độ dài khi viết code
 5. Template string ES6
  */
-//1. Tạo chuổi: ngắn gọn//
-//Cách 1//
+//1. Tạo chuổi //
+//Cách 1 : Ngắn gọn//
 var fullName = 'Dang Phan Quoc Tan'
 
 //Cách 2: dài dòng hơn//
 var fullName = new String('Son Dang');
 
-// Kiểm tra datatype//
+// Kiểm tra datatype : Kiểm tra kiểu dữ liệu gì//
 var fullName = new String('Son Dang');
 console.log(typeof fullName)
 
@@ -193,7 +193,7 @@ console.log(fullName)
 var firstName = 'Tan';
 var lastName = 'Dang';
 
-console.log(`Toi la: ${firstName} ${lastName}`)
+console.log(`Toi la: ${firstName} ${lastName}`) // Kết hợp giữa first và last ngắn gọn//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
