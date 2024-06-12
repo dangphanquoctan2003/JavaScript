@@ -1,6 +1,3 @@
-//Đệ quy//
-// học không vào nổi //
-
 /**
  * Một số phương thức về Array
         forEach()
