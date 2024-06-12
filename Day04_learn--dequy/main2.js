@@ -1,3 +1,29 @@
+//Đệ quy//
+
+function deQuy () {
+    deQuy(); 
+}
+deQuy();
+// Ví dụ countdown //
+function countDown(num) {  //Sau đó thằng num là bằng 3 chạy lần thứ 2 //
+    if(num > 0 ) {         // Sau đó chạy thằng thứ 3 lớn hơn 0, thỏa mãn điều kiện lần 3 //
+        console.log(num);  // Sau nó console.log ra số 3 //
+        return countDown(num - 1);  //Và nó sẽ return lại chính nó và lấy num - 1 có nghĩa là 3-1 và nó sẽ gọi lại chính nó và 2 cũng thỏa mãn điều kiện lần 5 //
+    }
+        return num;        // nó sẽ k return thằng này đc nữa lần 4 //
+}
+countDown(10); // nó chạy thằng này đầu tiên //
+
+//Ví dụ tính giai thừa //
+
+function giaiThua(num) {  // thứ 2 : nó truyền thằng num = 6 //
+    if(num > 0) {         // Thứ 3 : nó xét thằng num = 6 > 0, thỏa mãn điều kiện if //
+        return num * giaiThua(num - 1); //Thì suy ra nó trả về thằng 6 * giai thừa (3-1) và nó cứ lặp lại đến khi nào điều kiên if k thỏa mãn đc nữa //
+    }   
+    return 1;
+}
+giaiThua(6);  // đầu tiên nó truyền cái number = 6//
+///////////////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Một số phương thức về Array
         forEach()
@@ -100,7 +126,7 @@ console.log(listCourse)
 // Output: [{ name: 'Bóng rổ, like: 6 }, { name: 'Bóng đá, like: 10 }]
 
 // Kết quả //
-const sports = [
+const sport = [
     {
         name: 'Bóng rổ',
         like: 6
