@@ -18,12 +18,12 @@ console.log(languages)
 
 //cách tạo : 1 mảng gồm nhiều tên // Cách 2 :
 
-var languages = new Array(
+var languages = new Array[
     'JavaScript', //1 phần từ của mảng //
     'PHP',        //1 phần từ của mảng //
     'Ruby',       //1 phần từ của mảng //
 
-);
+];
 console.log(languages)
 
 // Kiểm tra data type : typeoff//
