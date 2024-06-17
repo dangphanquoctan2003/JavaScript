@@ -169,4 +169,126 @@ height: 100px',
 backgroundColor: 'green',
 });
 
+// Ví dụ //
+// Các bạn hãy thay đổi màu nền của thẻ div có class là .red thành màu #f00 và màu chữ của thẻ p thành màu #f05123.
+
+// index.html //
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Document</title>
+//     <style>
+//         div {
+//             width: 100px;
+//             height: 100px;
+//             background-color: #000;
+//             color: #fff;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <div class="red">Đổi màu thẻ div này thành màu #f00</div>
+//     <p>F8 - Học lập trình để đi làm</p>
+// </body>
+// </html>
+
+// Kết quả //
+
+// main.js //
+var changeColour = document.querySelector('.red');
+Object.assign(changeColour.style, {
+backgroundColor: '#f00',
+})
+var changeP = document.querySelector('p');
+
+Object.assign(changeP.style, {
+color: '#f05123',
+})
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ClassList Property //
+var boxElement =
+    document.querySelector('.box');
+
+setInterval(() => {
+    boxElement.classList.toggle('red');
+}, 1000);
+
+// Ví dụ 1 //
+// Các bạn hãy thực hiện các yêu cầu dưới đây:
+
+// Thêm class title vào thẻ h1
+// Thay thế class sub-title ở thẻ p bằng class content
+// Note: Hãy sử dụng kiến thức học được ở bài ClassList Property, không được sử dụng thuộc tính className nhé.
+//Kết quả //
+var addClassH1 = document.querySelector('h1');
+addClassH1.classList.add('title');
+var replaceClass = document.querySelector('p');
+replaceClass.classList.remove('sub-title');
+replaceClass.classList.add('content');
+
+// ví dụ 2 //
+// Cho trước file HTML có các thẻ div, các bạn hãy thêm class box vào các thẻ div này nhé.
+// Gợi ý: Bạn có thể sử dụng forEach lặp qua các phần tử div, nhưng trước hết các bạn phải lấy được danh sách các phần tử div ra nhé.
+// Note: Hãy sử dụng kiến thức học được ở bài ClassList Property, không được sử dụng thuộc tính className nhé.
+
+// index.html //
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+//     <div>Box</div>
+// </body>
+// </html>
+
+// kết quả //
+// main.js //
+document.querySelectorAll('div').forEach(function(div) {
+    div.classList.add('box');
+    });
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// DOM events //
+var h1Elements =
+document.querySelectorAll('h1');
+for(var i = 0; i < h1Elements.length; ++i) {
+h1Elements[i].onclick = function(e) {
+console.log(h1Elements[i]);
+}
+}
+console.log(i);
+
+// ví dụ //
+// Cho trước thẻ button, các bạn hãy viết code JS sao cho khi click vào button sẽ đổi màu chữ button sang màu #fff.
+
+var colorr = document.querySelector('button')
+
+colorr.onclick = function() {
+
+colorr.style.color = "#fff"
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// PreventDefault and StopPropagation //
+document.querySelector('div').onclick =
+function() {
+console.log('DIV')
+}
+document.querySelector('button').onclick =
+function(e) {
+e.stopPropagation();
+console.log('Click me!')
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
 
